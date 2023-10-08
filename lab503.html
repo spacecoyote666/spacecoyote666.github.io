@@ -1,24 +1,95 @@
 <!DOCTYPE HTML>
 <html>
+  <head>
   <title> Potatoes </title>
-
+    </head>
   <style>
+    body {width: 100%;}
+    #container {
+      width: 70%;
+      text-align: left;
+      margin: 0px auto;
+    }
     
+    .caption {
+      font-size: 10px;
+      font-family: 'Comic Sans MS';
+      
+    }
+      #photo {
+        height: 300px;
+        width: 500px;
+        border: 1px solid #D2B48C;
+        padding:10px;
+        display: block;
+        float: right;
+        margin-left: auto;
+        margin-right: 0;
+      }
+    #table {
+      
+      border: 2px solid #964B00;
+      padding: 20px;
+      margin-bottom: 30px;
+      margin-right: auto;
+      margin-left: auto;
+      background-color: #FFF4BC;
+      text-align: center;
+      float:right;
+      display:block;
+    }
+
+    #table th {     
+        color: white;
+        background-color: green;
+        text-align: center;
+    }
+    #tr, td {
+      padding: 5px
+    }
+    #heading {
+        text-align:center;
+        color:green;
+        padding-top: 10px
+      }
+
+    #margepotato {
+      height: auto;
+      width: 250px;
+      border: 10px solid #107DC0;
+      padding:5px;
+      display: block;
+      margin: auto;
+    }
+
+    #list {
+    background-color: #FFFFF2
+    }
+
+    #varitety {
+      padding: 20px;
+      margin:right
+    }
   </style>
   
   <body>
   <div id="container">
-    <h3> Potatoes are great</h3>
-    <div id="photo">
-    <img id="solanum-tubersum" src="solanum-tuberosum.webp"/>
+    <div id=heading>
+    <h1> Potatoes are great </h1>
+    </div>
+    <div id=firstphoto>
+    <img id="photo" src="solanum-tuberosum.webp"/>
+      <p class="caption"> A plethora of potatoes.</p>
       </div>
 
     <div id="potato">
     <p> Potato are very underrated vegetables. They are actually categorized as a starchy vegetable. Potatoes were domesticated in South America over 8,00 years ago.</p>
       </div>
 
+    <hr>
+    
     <h3> Potatoes can be cooked many different ways </h3>
-    <div>
+    <div id="list">
     <ul>
       <li> boiled</li>
       <li> roasted</li>
@@ -30,14 +101,14 @@
       <li> put in a stew</li>
     </ul>
       </div>
-
+<hr>
     <h3> Multiple varieties </h3>
     <div id="variety">
-    <p class= "varietywords"> There are over 4,000 types of potatoes grown worldwide. Here are a few examples. </p>
+    <p> There are over 4,000 types of potatoes grown worldwide. Here are a few examples. </p>
     </div>
-    
+  
     <div>
-    <table>
+    <table id="table">
       <tr>
         <th>Type of Potato</th>
         <th>Outside Color</th>
@@ -89,13 +160,15 @@
     </table>
       </div>
     
+     <hr>
+    
     <h3> More Information</h3>
-    <p> If you would like more information on potatoes, check out <a href="https://potatogoodness.com"> these recipes. <a/>. </p>
+    <p> If you would like more information on potatoes, check out <a href="https://potatogoodness.com"> these recipes <a/>. </p>
      <div>
-      <img id= "marge" src="margepotato.jpeg"/>
+      <img id= "margepotato" src="margepotato.jpeg"/>
        <p class="caption"> Image source: Know Your Meme</p>
      </div>
 
-    </div>    
+  </div>    
   </body>
 </html>
