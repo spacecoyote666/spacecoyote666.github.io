@@ -1,16 +1,45 @@
 <!DOCTYPE HTML>
 <html>
+  <head>
   <title> Potatoes </title>
-
+    </head>
   <style>
-    
+    body {width: 100%;}
+    #container {
+      width: 70%;
+      text-align: left;
+      margin: 0px auto;
+    }
+    #margepotato {
+      height: auto;
+      width: 500px;
+      border: 10px solid #D2B48C;
+      padding:5px;
+      display: block;
+      margin: auto;
+    }
+    .caption {
+      font-size: 10px;
+      font-family: 'Comic Sans MS';
+      text-align: center;
+    }
+      #photo {
+        height: auto;
+        width: 500px;
+        border: 1px solid #D2B48C;
+        padding:5px;
+        display: block;
+        margin: auto;
+      }
+      
   </style>
   
   <body>
   <div id="container">
     <h3> Potatoes are great</h3>
-    <div id="photo">
-    <img id="solanum-tubersum" src="solanum-tuberosum.webp"/>
+    <div>
+    <img id="photo" src="solanum-tuberosum.webp"/>
+      <p class="caption"> A plethora of potatoes.</p>
       </div>
 
     <div id="potato">
@@ -33,10 +62,10 @@
 
     <h3> Multiple varieties </h3>
     <div id="variety">
-    <p class= "varietywords"> There are over 4,000 types of potatoes grown worldwide. Here are a few examples. </p>
+    <p> There are over 4,000 types of potatoes grown worldwide. Here are a few examples. </p>
     </div>
     
-    <div>
+    <div id="table">
     <table>
       <tr>
         <th>Type of Potato</th>
@@ -92,10 +121,10 @@
     <h3> More Information</h3>
     <p> If you would like more information on potatoes, check out <a href="https://potatogoodness.com"> these recipes. <a/>. </p>
      <div>
-      <img id= "marge" src="margepotato.jpeg"/>
+      <img id= "margepotato" src="margepotato.jpeg"/>
        <p class="caption"> Image source: Know Your Meme</p>
      </div>
 
-    </div>    
+  </div>    
   </body>
 </html>
