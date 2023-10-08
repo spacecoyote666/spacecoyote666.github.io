@@ -10,14 +10,7 @@
       text-align: left;
       margin: 0px auto;
     }
-    #margepotato {
-      height: auto;
-      width: 500px;
-      border: 10px solid #D2B48C;
-      padding:5px;
-      display: block;
-      margin: auto;
-    }
+    
     .caption {
       font-size: 10px;
       font-family: 'Comic Sans MS';
@@ -27,16 +20,41 @@
         height: auto;
         width: 500px;
         border: 1px solid #D2B48C;
-        padding:5px;
+        padding:10px;
         display: block;
         margin: auto;
       }
-      
+    #table {
+      float: center;
+      border: 2px solid #964B00;
+      padding: 5px;
+      margin-bottom: 30px;
+    }
+
+    #table th {     
+        color: white;
+        background-color: green;
+    }
+
+      h1 {
+        margin:auto;
+        color:green;
+      }
+
+    #margepotato {
+      height: auto;
+      width: 500px;
+      border: 10px solid #D2B48C;
+      padding:5px;
+      display: block;
+      margin: auto;
+    }
+
   </style>
   
   <body>
   <div id="container">
-    <h3> Potatoes are great</h3>
+    <h1> Potatoes are great </h1>
     <div>
     <img id="photo" src="solanum-tuberosum.webp"/>
       <p class="caption"> A plethora of potatoes.</p>
@@ -65,8 +83,8 @@
     <p> There are over 4,000 types of potatoes grown worldwide. Here are a few examples. </p>
     </div>
     
-    <div id="table">
-    <table>
+    <div>
+    <table id="table">
       <tr>
         <th>Type of Potato</th>
         <th>Outside Color</th>
@@ -121,7 +139,7 @@
     <h3> More Information</h3>
     <p> If you would like more information on potatoes, check out <a href="https://potatogoodness.com"> these recipes. <a/>. </p>
      <div>
-      <img id= "margepotato" src="margepotato.jpeg"/>
+      <img id= "photo" src="margepotato.jpeg"/>
        <p class="caption"> Image source: Know Your Meme</p>
      </div>
 
