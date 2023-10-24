@@ -125,6 +125,11 @@
       $("#divctr7").html("naturally");
     });
 
+      //togglefade photo
+      $("#nopotatoes").click(function() {
+        console.log("toggle the photo");
+        $("#photo").fadeToggle();
+      });
 
       //closing the document ready
     });  
@@ -140,6 +145,7 @@
     <div id=firstphoto>
     <img id="photo" src="solanum-tuberosum.webp"/>
       <p class="caption"> A plethora of potatoes.</p>
+      <button id="nopotatoes">Please do not show me potatoes.</button>
       </div>
 
     <div id="potato">
