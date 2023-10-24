@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <title> Potatoes </title>
+    </head>
+  <style>
+    body {width: 100%;}
+    #container {
+      width: 70%;
+      text-align: left;
+      margin: 0px auto;
+    }
+    
+    .caption {
+      font-size: 10px;
+      font-family: 'Comic Sans MS';
+      margin: auto;
+      
+    }
+      #photo {
+        height: 400px;
+        width: 1000px;
+        border: 1px solid #D2B48C;
+        padding:10px;
+        margin-left: auto;
+        margin-right: auto;
+        
+      }
+    #table {
+      
+      border: 2px solid #964B00;
+      padding: 10px;
+      margin-bottom: 30px;
+      background-color: #FFF4BC;
+      text-align: center;
+      margin: auto;
+    }
+
+    #table th {     
+        color: white;
+        background-color: green;
+        text-align: center;
+    }
+    #tr, td {
+      padding: 5px
+    }
+    #heading {
+        text-align:center;
+        color:green;
+        padding-top: 10px
+      }
+
+    #margepotato {
+      height: auto;
+      width: 400px;
+      border: 10px solid #107DC0;
+      padding:5px;
+      margin: auto;
+    }
+
+    #list {
+    background-color: #FFFFF2
+    }
+
+    #varitety {
+      padding: 20px;
+      margin:right
+    }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <script>
+    //this is where javascript goes
+
+    //clicktoreveal buttons code
+    $("#clicktoreveal1").click(function() {
+      //reun this when i click on this button
+      $("clicktoreveal1").html("yes");
+    });
+
+     //clicktoreveal buttons code
+    $("#clicktoreveal2").click(function() {
+      //reun this when i click on this button
+      $("clicktoreveal2").html("absolutely");
+    });
+
+     //clicktoreveal buttons code
+    $("#clicktoreveal3").click(function() {
+      //reun this when i click on this button
+      $("clicktoreveal3").html("you bet");
+    });
+
+     //clicktoreveal buttons code
+    $("#clicktoreveal4").click(function() {
+      //reun this when i click on this button
+      $("clicktoreveal4").html("duh");
+    });
+
+     //clicktoreveal buttons code
+    $("#clicktoreveal5").click(function() {
+      //reun this when i click on this button
+      $("clicktoreveal5").html("sure");
+    });
+
+     //clicktoreveal buttons code
+    $("#clicktoreveal6").click(function() {
+      //reun this when i click on this button
+      $("clicktoreveal6").html("yeah");
+    });
+
+     //clicktoreveal buttons code
+    $("#clicktoreveal7").click(function() {
+      //reun this when i click on this button
+      $("clicktoreveal7").html("naturally");
+    });
+  </script>
+    
+
+    
+  <body>
+  <div id="container">
+    <div id=heading>
+    <h1> Potatoes are great </h1>
+    </div>
+    <div id=firstphoto>
+    <img id="photo" src="solanum-tuberosum.webp"/>
+      <p class="caption"> A plethora of potatoes.</p>
+      </div>
+
+    <div id="potato">
+    <p> Potato are very underrated vegetables. They are actually categorized as a starchy vegetable. Potatoes were domesticated in South America over 8,00 years ago.</p>
+      </div>
+
+    <hr>
+    
+    <h3> Potatoes can be cooked many different ways </h3>
+    <div id="list">
+    <ul>
+      <li> boiled</li>
+      <li> roasted</li>
+      <li> mashed</li>
+      <li> fried</li>
+      <li> steamed</li>
+      <li> microwaved</li>
+      <li> braised </li>
+      <li> put in a stew</li>
+    </ul>
+      </div>
+
+    <h3> Multiple varieties </h3>
+    <div id="variety">
+    <p> There are over 4,000 types of potatoes grown worldwide. Here are a few examples. </p>
+    </div>
+  
+    <div>
+    <table id="table">
+      <tr>
+        <th>Type of Potato</th>
+        <th>Outside Color</th>
+        <th>Inside Color</th>
+        <th>Are they delicious?</th>
+      </tr>
+      <tr>
+        <td>Russet</td>
+        <td>brown</td>
+        <td>white</td>
+        <td><button id="clicktoreveal1">Click for answer</button></td>
+      </tr>
+      <tr>
+        <td>Red</td>
+        <td>red</td>
+        <td>white</td>
+        <td><button id="clicktoreveal2">Click for answer</button></td>
+      </tr>
+      <tr>
+      <td> Sweet</td>
+      <td>brown</td>
+      <td>orange</td>
+      <td><button id="clicktoreveal3">Click for answer</button></td>
+      </tr>
+      <tr>
+        <td>Purple Japanese Sweet</td>
+        <td>brown</td>
+        <td>purple</td>
+        <td><button id="clicktoreveal4">Click for answer</button></td>
+      </tr>
+      <tr>
+        <td>Japanese Sweet</td>
+        <td>red</td>
+        <td>yellow</td>
+        <td><button id="clicktoreveal5">Click for answer</button></td>
+      </tr>
+      <tr>
+        <td>Yukon Gold</td>
+        <td>brown</td>
+        <td>yellow</td>
+        <td><button id="clicktoreveal6">Click for answer</button></td>
+      </tr>
+      <tr>
+        <td>Purple</td>
+        <td>purple</td>
+        <td>purple</td>
+        <td><button id="clicktoreveal7">Click for answer</button></td>
+      </tr>
+    </table>
+      </div>
+    
+    
+    
+    <h3> More Information</h3>
+    <p> If you would like more information on potatoes, check out <a href="https://potatogoodness.com"> these recipes <a/>. </p>
+     <div>
+      <img id= "margepotato" src="margepotato.jpeg"/>
+       <p class="caption"> Image source: Know Your Meme</p>
+     </div>
+
+  </div>    
+  </body>
+</html>
