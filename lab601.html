@@ -131,6 +131,11 @@
         $("#photo").fadeToggle();
       });
 
+      //hidden and reveal text
+      $("#appear").click(function() {
+        console.log("clicked on appear button.";
+        $("#hiddentext").text("Why are you looking up stuff about potatoes? You should give them a try.");
+      });
       //closing the document ready
     });  
   </script>
@@ -146,6 +151,8 @@
     <img id="photo" src="solanum-tuberosum.webp"/>
       <p class="caption"> A plethora of potatoes.</p>
       <button id="nopotatoes">Please do not show me potatoes.</button>
+      <div id="hiddentext">
+        <button id="appear">I really really don't like potatoes</button></div>
       </div>
 
     <div id="potato">
