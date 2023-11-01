@@ -90,11 +90,16 @@
                       }
                      
                       // check if the player has won the game
-
+                      if (! blank.includes("-")) {
+                        gameWon = true;
+                        $("#info").text("You won. . . for now. . . ");
+                      }
 
                     }
 
                     // add the letter to letters already tried
+                    triedLetters = triedLetters + letter;
+                    console.log("triedLetters is ", triedLetters);
 
                   }
               });
