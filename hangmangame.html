@@ -40,7 +40,7 @@
                   // check if the game has been won or lost
                   if (gameWon != true && gameLost != true) {
                     // erase the info box
-                    $(#"info").text(" ");
+                    $("#info").text(" ");
 
                 
                     // use text to get the letter that was clicked on
@@ -64,7 +64,9 @@
                         $("#guesses").text("Guesses left: "+tries);
 
                       // are they out of tries? then they lost!
-
+                      if (tries < 1) {
+                        gameLost = true;
+                        $("#info).text("Sorry, you are out of guess. YOU LOSE, SUCKA!");
                     
                     
                     // otherwise, put a line through it and
