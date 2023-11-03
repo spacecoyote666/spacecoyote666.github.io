@@ -27,7 +27,7 @@
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-  var marker = L.marker([51.5, -0.09]).addTo(map);
+  var marker = L.marker([10.306738978136195, -84.81069176128523]).addTo(map);
 
   var circle = L.circle([10.480243086722407, -83.51225497324829], {
     color: 'red',
@@ -37,12 +37,13 @@
 }).addTo(map);
 
   var polygon = L.polygon([
-    [51.509, -0.08],
-    [51.503, -0.06],
-    [51.51, -0.047]
+    [10.31372109722223, -84.79320704902675],
+    [10.308952785546662, -84.71081509408319],
+    [10.264200501529343, -84.78985172054489],
+    [10.299049138386508, -84.7958167489571]
 ]).addTo(map);
 
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+marker.bindPopup("<b>Hola!</b><br>The town of Monteverde, gateway to the Cloud Forest Reserve.").openPopup();
 circle.bindPopup("I am a circle.");
 polygon.bindPopup("I am a polygon.");
 
