@@ -33,7 +33,7 @@
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 800
+    radius: 1000
 }).addTo(map);
 
   var polygon = L.polygon([
@@ -48,8 +48,8 @@ circle.bindPopup("Amazing wildlife viewing of various birds, reptiles, bats, ins
 polygon.bindPopup("Monteverde Cloud Forest Biological Preserve - Reserva biológica Bosque Nuboso Monteverde.");
 
   var popup = L.popup()
-    .setLatLng([51.513, -0.09])
-    .setContent("I am a standalone popup.")
+    .setLatLng([10.467159559969245, -84.70218802984657])
+    .setContent("Arenal Volanco.")
     .openOn(map);
 
   function onMapClick(e) {
