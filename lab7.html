@@ -31,13 +31,15 @@
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-  var marker = L.marker([10.306738978136195, -84.81069176128523]).addTo(map);
+  var markerMonte = L.marker([10.306738978136195, -84.81069176128523]).addTo(map);
+  var markerArenal = L.marker([10.468218211825832, -84.70247991863921]).addTo(map);
+  var markerPlaya = L.marker ([10.573462313971804, -85.6803883156647]).addTo(map);
 
   var circle = L.circle([10.480243086722407, -83.51225497324829], {
     color: 'yellow',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 2000
+    radius: 5000
 }).addTo(map);
 
   var polygon = L.polygon([
@@ -47,7 +49,9 @@
     [10.299049138386508, -84.7958167489571]
 ]).addTo(map);
 
-marker.bindPopup("<b>Hola!</b><br>The town of Monteverde, gateway to the Monteverde Cloud Forest Preserve.").openPopup();
+markerMonte.bindPopup("<b>Hola!</b><br>The town of Monteverde, gateway to the Monteverde Cloud Forest Preserve.").openPopup();
+markerArenal.bindPopup("Arenal volcano is still active! The last eruption was in 1960 and you can see a faint glow of lava at the top.");
+markerPlaya.bindPopup("Playa Hermosa is a beautiful beach to watch the sunset!");
 circle.bindPopup("Tortuguero National Park - Parque Nacional Tortuguero Amazing wildlife viewing. Beaches are important sea turtle nesting sites.");
 polygon.bindPopup("Monteverde Cloud Forest Biological Preserve - Reserva biológica Bosque Nuboso Monteverde.");
 
