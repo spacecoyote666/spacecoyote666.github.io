@@ -76,7 +76,7 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 			acsDenver2021Layer = L.geoJSON(data).addTo(map);
 
 			//move the map to the area of the data
-			map.panTo(acsDenver2021Layer.getBounder().getCenter());
+			map.panTo(acsDenver2021Layer.getBoundery().getCenter());
 
 			//add the map to the layer controls
 			layerControl.addOverlay(acsDenver2021Layer, "Census 2021");
