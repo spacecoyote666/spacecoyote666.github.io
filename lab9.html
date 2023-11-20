@@ -72,7 +72,7 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 
     // function to style my chloropleth map
     function style1(feature) {
-	    d = feature.properties.PCT_POVERTY;
+	    d = feature.properties.FAMILY_HOUSEHOLDS / feature.properties.TTL_HOUSEHOLDS * 100.0;
 	    answer = d > 30 ? '#800026' :
 		     d > 20 ? '#DB0026' :
 		     d > 15 ? '#E31A1C' :
@@ -97,8 +97,9 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 			acsDenver2021Layer = L.geoJSON(data,
                                      {style:style1,
 				     onEachFeature: function(feature, layer) {
-				       		layer.bindPopup("Percent Poverty: " +
-								feature.properties.PCT_POVERTY + '%');
+					     d = feature.properties.FAMILY_HOUSEHOLDS / feature.properties.TTL_HOUSEHOLDS * 100.0;
+				       	     layer.bindPopup("Percent Family Households: " +
+								(d + '%');
 				       }
 				     }
                                     ).addTo(map);
