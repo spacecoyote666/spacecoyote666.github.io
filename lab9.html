@@ -99,7 +99,7 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 				     onEachFeature: function(feature, layer) {
 					     d = feature.properties.FAMILY_HOUSEHOLDS / feature.properties.TTL_HOUSEHOLDS * 100.0;
 				       	     layer.bindPopup("Percent Family Households: " +
-								(d + '%');
+								d + '%');
 				       }
 				     }
                                     ).addTo(map);
