@@ -73,13 +73,13 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
     // function to style my chloropleth map
     function style1(feature) {
 	    d = feature.properties.FAMILY_HOUSEHOLDS / feature.properties.TTL_HOUSEHOLDS * 100.0;
-	    answer = d > 100 ? '#feebe2' :
-		     d > 84 ? '#c51b8a' :
-		     d > 68 ? '#f768a1' :
-		     d > 52 ? '#fa9fb5' :
-		     d > 36  ? '#fcc5c0' :
-		     d > 20  ? '#feebe2' :
-		               '#ffeda0';
+	    answer = d > 100 ? '#7a0177' :
+		     d > 84 ? '#ae017e' :
+		     d > 68 ? '#dd3497' :
+		     d > 52 ? '#f768a1' :
+		     d > 36  ? '#fa9fb5' :
+		     d > 20  ? '#fcc5c0' :
+		               '#feebe2';
 		     // d > 1  ? '#' :
 		        
 	    styleReturn = {
