@@ -95,7 +95,12 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 		$.getJSON('./acs_denver_2021.geojson',function(data) {
 			//convert the file (data) into a layer
 			acsDenver2021Layer = L.geoJSON(data,
-                                     {style:style1 }
+                                     {style:style1,
+				     onEachFeature: function(feature, layer) {
+				       		layer.bindPopup("Percent Poverty: " +
+								feature.properties.PCT_POVERTY + '%');
+				       }
+				     }
                                     ).addTo(map);
 
 			//move the map to the area of the data
