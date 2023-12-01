@@ -88,7 +88,7 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
     // function to style my chloropleth map
     function style1(feature) {
 	    d = feature.properties.FAMILY_HOUSEHOLDS / feature.properties.TTL_HOUSEHOLDS * 100.0;
-	    answer = d > 100 ? '#7a0177' :
+	    answer = 
 		     d > 84 ? '#ae017e' :
 		     d > 68 ? '#dd3497' :
 		     d > 52 ? '#f768a1' :
@@ -137,8 +137,8 @@ var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'info legend');
-	 colors = ['#feebe2','#fcc5c0','#fa9fb5' ,'#f768a1','#dd3497','#ae017e',
-             '#7a0177'];
+	 colors = ['#feebe2','#fcc5c0','#fa9fb5' ,'#f768a1','#dd3497','#ae017e'
+             ];
        labels = ['0 - 20%', '20 - 36%', '36 - 52%', '52 - 68%', '68 - 84%', 
                  '84 - 100%'];
 
