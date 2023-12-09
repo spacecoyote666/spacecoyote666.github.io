@@ -114,8 +114,19 @@ var hazardIcon = L.icon({
     iconUrl: 'lightening.png',
     iconSize:     [38, 38],
 });
+var duck2 = L.icon({
+    iconUrl: 'duck2.png',
+    iconSize:     [38, 38],
+});
 		
 L.marker([39.569279, -105.042783], {icon: hazardIcon}).addTo(map).bindPopup("<b>Be careful!</b><br>This is an electrical line. Don't fly into here!");
+L.marker([39.575092, -105.043024], {icon: duck2}).addTo(map).bindPopup("<b>Some of the ducks you will see here are:</b><br><ul>
+  <li>Common Merganser</li>
+  <li>Gadwall</li>
+  <li>Common Goldeneye</li>
+  <li>Hooded Merganser</li>
+  <li>Mallard</li>
+</ul>");
 
 
 
