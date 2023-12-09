@@ -84,7 +84,7 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 
 		// the control let's the user turn on / off layers -- ##3 here
 		var layerControl = L.control.layers(baseMaps,null).addTo(map);
-
+    /*
     // function to style my chloropleth map
     function style1(feature) {
 	    d = feature.properties.FAMILY_HOUSEHOLDS / feature.properties.TTL_HOUSEHOLDS * 100.0;
@@ -106,7 +106,7 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 		fillOpacity : 0.7
 	    };
 	    return styleReturn;
-    }
+    }*/
 		// let's add the Denver ACS data -- ##4 here
 		$.getJSON('./Lakes_UTM.geojson',function(data) {
 			//convert the file (data) into a layer
