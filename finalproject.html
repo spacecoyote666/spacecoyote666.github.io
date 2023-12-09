@@ -106,9 +106,6 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 				     }
                                     ).addTo(map);
 
-			//move the map to the area of the data
-			map.panTo(littletonlakes.getBounds().getCenter());
-
 			//add the map to the layer controls
 			layerControl.addOverlay(littletonlakes, "Arapahoe County Waterbodies");
 		});
