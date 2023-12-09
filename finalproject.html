@@ -55,7 +55,7 @@
 
 		// let's create our basemap! -- ##1 here
 /*map = L.map('map').setView([39.571316, -105.041342], 14);*/
-map = L.map('map').setView([39.571867, -105.041559], 14);
+map = L.map('map').setView([39.571867, -105.041559], 16);
 		
 		// let's add three sets of background tiles - one from OSM,  one from HOT OSM, and one from openTopoMap
 		var OSMTiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -130,14 +130,22 @@ var carp7 = L.icon({
     iconUrl: 'carp7.png',
     iconSize:     [38, 38],
 });
+var eagle3 = L.icon({
+    iconUrl: 'eagle3.png',
+    iconSize:     [38, 38],
+});
+function onMapClick(e) {
+    alert("This is a good spot to bird! ");
+}
 
+map.on('click', onMapClick);
 		
 L.marker([39.569279, -105.042783], {icon: hazardIcon}).addTo(map).bindPopup("<b>Be careful!</b><br>This is an electrical line. Don't fly into here!");
 L.marker([39.575092, -105.043024], {icon: duck2}).addTo(map).bindPopup("<b>Some of the ducks you will see here are:</b><br>Common Merganser<br>Gadwall<br>Common Goldeneye<br>Hooded Merganser<br>Mallard");
 L.marker([39.575177, -105.039340], {icon: duck4}).addTo(map).bindPopup("<b>You'll more than likely see:</b><br>Northern Shoveler<br>Bufflehead<br>American Coot<br>Redhead");
 L.marker([39.579072, -105.040343], {icon: goose8}).addTo(map).bindPopup("<b>You can view these birds from a blind off the trail:</b><br>Canada Goose<br>American Wigeon<br>American Coot<br>Green-winged Teal<br>Bald Eagle (they hang out on the powerlines)");
 L.marker([39.568012, -105.041253], {icon: carp7}).addTo(map).bindPopup("<b>This is a great fishing spot. Not as many birds but there may be:</b><br>American Coot<br>Great Blue Heron<br>Mallard<br>Pied-billed Grebe");
-
+L.marker([39.571862, -105.050289], {icon: eagle3}).addTo(map).bindPopup("<b>This is a municiple reservoir but you can see:</b><br>Bald Eagle<br>American White Pelican<br>Common Merganser<br>Common Goldeneye");
 
 		
 		// let's try to add some remote DRCOG data
