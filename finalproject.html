@@ -111,7 +111,8 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 		});
   
 
-
+var marker = L.marker([39.569343, -105.042917]).addTo(map);
+	     marker.bindPopup("<b>Be careful!</b><br>This is an electrical line. Don't fly into here!").openPopup();
 
 
 
