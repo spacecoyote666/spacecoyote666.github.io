@@ -87,7 +87,7 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
     
     // function to style my chloropleth map
     function style1(feature) {
-	    d = feature.properties.LAKE
+	    d = feature.properties.TYPE
 	    /*answer = 
 		     d > 84 ? '#ae017e' :
 		     d > 68 ? '#dd3497' :
@@ -113,8 +113,8 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 			littletonlakes = L.geoJSON(data,
                                      {style:style1,
 				     onEachFeature: function(feature, layer) {
-					     d = feature.properties.LAKE;
-				       	     layer.bindPopup("LAKE " +
+					     d = feature.properties.NAME;
+				       	     layer.bindPopup("Lake: " +
 								d );
 				       }
 				     }
@@ -131,7 +131,7 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 			newLayer = L.geoJSON(data);
 			layerControl.addOverlay(newLayer, "Highway Markers");
 		});
-
+/*
 var legend = L.control({position: 'bottomright'});
 
 legend.onAdd = function (map) {
@@ -155,7 +155,7 @@ legend.addTo(map);
 
 	// end document ready
 	});
-
+*/
 </script>
 </head>
 <body>
