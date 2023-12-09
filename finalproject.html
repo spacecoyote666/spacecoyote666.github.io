@@ -85,18 +85,10 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 		// the control let's the user turn on / off layers -- ##3 here
 		var layerControl = L.control.layers(baseMaps,null).addTo(map);
     
-    // function to style my chloropleth map
+    // function to style geoJSON
     function style1(feature) {
-	    d = feature.properties.TYPE
-	    /*answer = 
-		     d > 84 ? '#ae017e' :
-		     d > 68 ? '#dd3497' :
-		     d > 52 ? '#f768a1' :
-		     d > 36  ? '#fa9fb5' :
-		     d > 20  ? '#fcc5c0' :
-		               '#feebe2';
-		     // d > 1  ? '#' :
-	     */        
+	    feature.properties.TYPE
+	            
 	    styleReturn = {
 	    	fillColor : 'red',
 		weight : 1,
@@ -107,9 +99,9 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 	    };
 	    return styleReturn;
     }
-		// let's add the Denver ACS data -- ##4 here
+		// add the Arapahoe County Data 
 		$.getJSON('./Lakes_WGS.geojson',function(data) {
-			//convert the file (data) into a layer
+			//convert the file (data) into a layer - NAME is the key, value is the actual name of the lake
 			littletonlakes = L.geoJSON(data,
                                      {style:style1,
 				     onEachFeature: function(feature, layer) {
@@ -124,7 +116,7 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 			map.panTo(littletonlakes.getBounds().getCenter());
 
 			//add the map to the layer controls
-			layerControl.addOverlay(littletonlakes, "Census 2021");
+			layerControl.addOverlay(littletonlakes, "Arapahoe County Waterbodies");
 		});
 		// let's try to add some remote DRCOG data
 		$.getJSON('https://data.colorado.gov/api/geospatial/trm9-dm4m?method=export&format=GeoJSON', function(data) {
@@ -132,26 +124,7 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 			layerControl.addOverlay(newLayer, "Highway Markers");
 		});
 
-var legend = L.control({position: 'bottomright'});
 
-legend.onAdd = function (map) {
-
-    var div = L.DomUtil.create('div', 'info legend');
-	 colors = ['#feebe2','#fcc5c0','#fa9fb5' ,'#f768a1','#dd3497','#ae017e'
-             ];
-       labels = ['0 - 20%', '20 - 36%', '36 - 52%', '52 - 68%', '68 - 84%', 
-                 '84 - 100%'];
-
-    div.innerHTML = '<h2>% Family Households</h2><br>';
-    // loop through our density intervals and generate a label with a colored square for each interval
-    for (var i = 0; i < colors.length; i++) {
-        div.innerHTML += '<i style="background:' + colors[i] + '"></i> ' + labels[i] + '<br>';
-    }
-
-    return div;
-};
-
-legend.addTo(map);
 
 	// end document ready
 	});
