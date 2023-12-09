@@ -108,23 +108,23 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 	    return styleReturn;
     }
 		// let's add the Denver ACS data -- ##4 here
-		$.getJSON('./acs_denver_2021.geojson',function(data) {
+		$.getJSON('./Lakes_UTM.geojson',function(data) {
 			//convert the file (data) into a layer
-			acsDenver2021Layer = L.geoJSON(data,
+			littletonlakes = L.geoJSON(data,
                                      {style:style1,
 				     onEachFeature: function(feature, layer) {
-					     d = feature.properties.FAMILY_HOUSEHOLDS / feature.properties.TTL_HOUSEHOLDS * 100.0;
-				       	     layer.bindPopup("Percent Family Households: " +
-								d + '%');
+					     d = feature.properties.NAME;
+				       	     layer.bindPopup("LAKE " +
+								d );
 				       }
 				     }
                                     ).addTo(map);
 
 			//move the map to the area of the data
-			map.panTo(acsDenver2021Layer.getBounds().getCenter());
+			map.panTo(littletonlakes.getBounds().getCenter());
 
 			//add the map to the layer controls
-			layerControl.addOverlay(acsDenver2021Layer, "Census 2021");
+			layerControl.addOverlay(littletonlakes, "Census 2021");
 		});
 		// let's try to add some remote DRCOG data
 		$.getJSON('https://data.colorado.gov/api/geospatial/trm9-dm4m?method=export&format=GeoJSON', function(data) {
