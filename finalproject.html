@@ -108,7 +108,7 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 	    return styleReturn;
     }
 		// let's add the Denver ACS data -- ##4 here
-		$.getJSON('./Lakes_UTM.geojson',function(data) {
+		$.getJSON('./Lakes_WGS.geojson',function(data) {
 			//convert the file (data) into a layer
 			littletonlakes = L.geoJSON(data,
                                      {style:style1,
@@ -162,7 +162,7 @@ legend.addTo(map);
 
 
 <div id="header">
-	<h1>Birding at South Platte Park in Littleton, CO AH</h1>
+	<h1>Birding at South Platte Park in Littleton, CO HEEEEEEEEEE</h1>
 	<p>Data from <a href="https://ebird.org/hotspot/L480864">Check out eBird for more species and places to bird!</a></p>
 </div>
 <div id="map"></div>
