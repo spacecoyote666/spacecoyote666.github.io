@@ -54,7 +54,8 @@
 	$(document).ready(function() {
 
 		// let's create our basemap! -- ##1 here
-map = L.map('map').setView([39.571316, -105.041342], 14);
+/*map = L.map('map').setView([39.571316, -105.041342], 14);*/
+map = L.map('map').setView([39.57, -105.04], 10);
 		
 		// let's add three sets of background tiles - one from OSM,  one from HOT OSM, and one from openTopoMap
 		var OSMTiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -90,6 +91,8 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 	    };
 	    return styleReturn;
     }
+		
+
 		// add the Arapahoe County Data 
 		$.getJSON('./Lakes_WGS.geojson',function(data) {
 			//convert the file (data) into a layer - NAME is the key, value is the actual name of the lake
@@ -109,6 +112,14 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 			//add the map to the layer controls
 			layerControl.addOverlay(littletonlakes, "Arapahoe County Waterbodies");
 		});
+  
+
+
+
+
+
+
+		
 		// let's try to add some remote DRCOG data
 		$.getJSON('https://data.colorado.gov/api/geospatial/trm9-dm4m?method=export&format=GeoJSON', function(data) {
 			newLayer = L.geoJSON(data);
