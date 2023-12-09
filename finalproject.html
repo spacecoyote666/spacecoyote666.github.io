@@ -63,7 +63,7 @@
 	$(document).ready(function() {
 
 		// let's create our basemap! -- ##1 here
-map = L.map('map').setView([39.571453, -105.041510], 12);
+map = L.map('map').setView([39.571453, -105.041510], 10);
 		
 		// let's add three sets of background tiles - one from OSM,  one from HOT OSM, and one from openTopoMap
 		var OSMTiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -135,7 +135,7 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
 
 
 <div id="header">
-	<h1>Birding at South Platte Park in Littleton, CO HEE</h1>
+	<h1>Birding at South Platte Park in Littleton, CO HE</h1>
 	<p>Data from <a href="https://ebird.org/hotspot/L480864">Check out eBird for more species and places to bird!</a></p>
 </div>
 <div id="map"></div>
