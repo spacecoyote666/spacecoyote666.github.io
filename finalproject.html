@@ -112,17 +112,12 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
   
 var hazardIcon = L.icon({
     iconUrl: 'electrical.png',
-    
-
     iconSize:     [38, 95], // size of the icon
-   
     iconAnchor:   [39.569279, -105.042783], // point of the icon which will correspond to marker's location
-    
     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
 		
-var marker = L.marker([39.569279, -105.042783], {icon: hazardIcon}).addTo(map);
-marker.bindPopup("<b>Be careful!</b><br>This is an electrical line. Don't fly into here!");
+L.marker([39.569279, -105.042783], {icon: hazardIcon}).addTo(map).bindPopup("<b>Be careful!</b><br>This is an electrical line. Don't fly into here!");
 
 
 
